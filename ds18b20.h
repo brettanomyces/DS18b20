@@ -15,12 +15,19 @@
 #ifndef DS18B20_H_  
 #define DS18B20_H_
 
-void send(char bit);
-unsigned char read(void);
-void send_byte(char data);
-unsigned char read_byte(void);
-unsigned char RST_PULSE(void);
-float DS_get_temp(void);
-void DS_init(int GPIO);
+extern uint8_t ROM_NO[8];
+
+void ow_write_bit(uint8_t bit);
+uint8_t ow_read_bit(void);
+void ow_write_byte(uint8_t data);
+uint8_t ow_read_byte(void);
+uint8_t ow_touch_reset(void);
+
+uint8_t ow_search();
+uint8_t ow_first();
+uint8_t ow_next();
+
+float ds_get_temp(uint8_t addr[]);
+void ow_init(uint8_t pin);
 
 #endif
