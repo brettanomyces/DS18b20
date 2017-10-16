@@ -1,3 +1,8 @@
+
+I recommend using this library instead of my own: https://github.com/DavidAntliff/esp32-ds18b20, it does everything this library does, plus more!
+
+----
+
 # Not so simple library for multiple DS18B20 on ESP32
 
 ## Resources
